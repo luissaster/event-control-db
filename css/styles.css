@@ -1,0 +1,46 @@
+/* Estilos para a tabela de eventos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilo para o botão de matrícula */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
