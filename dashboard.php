@@ -102,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['unregister_course_id']
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
     <div class="container">
@@ -122,11 +122,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['unregister_course_id']
         <p>Matrícula: <?php echo htmlspecialchars($user['matricula']); ?></p>
         <p>Cargo: <?php if ($user['role'] == 'admin') echo 'Administrador'; else echo 'Aluno'; ?></p>
         <nav>
-            <a href="index.php">Sair</a>
-            <?php if ($user['role'] == 'admin'): ?>
-                <a href="manage_events.php">Gerenciar Eventos</a>
-                <a href="reports.php">Relatório</a>
-            <?php endif; ?>
+            <?php 
+            // Exibir os links de acordo o cargo do usuário
+            echo "<a href = 'user_info.php'><button class='user-info-btn'>Informações Pessoais</button></a>";
+            if ($user['role'] == 'admin') {
+                echo "<a href='manage_events.php'><button class='user-info-btn'>Gerenciar Eventos</button></a>";
+                echo "<a href='reports.php'><button class='user-info-btn'>Relatório</button></a>";
+            }
+            echo "<a href='index.php'><button class='user-info-btn'>Sair</button></a>";
+            ?>
         </nav>
         <section>
             <h2>Minha Agenda</h2>
@@ -154,7 +158,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['unregister_course_id']
                         echo "<td>";
                         echo "<form method='POST' action='dashboard.php'>";
                         echo "<input type='hidden' name='unregister_course_id' value='" . htmlspecialchars($row['id']) . "'>";
-                        echo "<button type='submit'>Desmatricular</button>";
+                        echo "<button type='submit' class = 'desmatricular'>Desmatricular</button>";
                         echo "</form>";
                         echo "</td>";
                         echo "</tr>";
