@@ -1,0 +1,87 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+span {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: calc(100% - 22px);
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    display: none;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#editar-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+#confirmar-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+#editar-btn:hover {
+    background-color: #218838;
+}
+
+#confirmar-btn:hover {
+    background-color: #0069d9;
+}
+
+a button {
+    background-color: #6c757d;
+    color: white;
+}
+
+a button:hover {
+    background-color: #5a6268;
+}
+
+button[type="button"] {
+    margin-right: 10px;
+}
