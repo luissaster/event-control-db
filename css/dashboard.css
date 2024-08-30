@@ -78,7 +78,7 @@ td {
 }
 
 thead {
-  background-color: #28a745; /* Cor combinando com o verde dos botões */
+  background-color: #28a745;
   color: white;
 }
 
@@ -112,4 +112,15 @@ button[type="submit"]:not(.desmatricular) {
 
 button[type="submit"]:not(.desmatricular):hover {
   background-color: #218838;
+}
+
+button.voltar {
+  background-color: #6c757d;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.voltar:hover {
+  background-color: #5a6268;
 }

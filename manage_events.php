@@ -45,13 +45,14 @@ $events_result = $conn->query($events_query);
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerência de Eventos e Cursos</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/manage_events.css">
 </head>
+
 <body>
     <div class="container">
         <h2>Gerência de Eventos e Cursos</h2>
@@ -116,8 +117,8 @@ $events_result = $conn->query($events_query);
             <button type="submit" name="add_course">Adicionar Curso</button>
         </form>
 
-        <p><a href="dashboard.php">Voltar ao Dashboard</a></p>
+        <a href="dashboard.php"><button type="button" class = "voltar">Voltar ao Dashboard</button></a>
     </div>
 </body>
-</html>
 
+</html>

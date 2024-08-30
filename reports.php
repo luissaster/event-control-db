@@ -31,11 +31,13 @@ $registrations_result = $conn->query($registrations_query);
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <title>Relatórios</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reports.css">
 </head>
+
 <body>
     <h2>Relatórios</h2>
 
@@ -51,7 +53,8 @@ $registrations_result = $conn->query($registrations_query);
     <h3>Eventos e Cursos Cadastrados</h3>
     <ul>
         <?php while ($event = $events_result->fetch_assoc()): ?>
-            <li><?php echo $event['event_title'] . " - " . $event['course_title'] . " (" . $event['course_date'] . " " . $event['start_time'] . "-" . $event['end_time'] . ")"; ?></li>
+            <li><?php echo $event['event_title'] . " - " . $event['course_title'] . " (" . $event['course_date'] . " " . $event['start_time'] . "-" . $event['end_time'] . ")"; ?>
+            </li>
         <?php endwhile; ?>
     </ul>
 
@@ -59,10 +62,12 @@ $registrations_result = $conn->query($registrations_query);
     <h3>Inscrições</h3>
     <ul>
         <?php while ($registration = $registrations_result->fetch_assoc()): ?>
-            <li><?php echo $registration['name'] . " (" . $registration['matricula'] . ") - " . $registration['course_title'] . " em " . $registration['event_title']; ?></li>
+            <li><?php echo $registration['name'] . " (" . $registration['matricula'] . ") - " . $registration['course_title'] . " em " . $registration['event_title']; ?>
+            </li>
         <?php endwhile; ?>
     </ul>
 
-    <p><a href="dashboard.php">Voltar ao Dashboard</a></p>
+    <a href="dashboard.php"><button type="button" class="voltar">Voltar ao Dashboard</button></a>
 </body>
+
 </html>

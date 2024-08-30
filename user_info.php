@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div>
                 <button type="button" id="editar-btn" onclick="habilitarEdicao()">Editar Informações</button>
                 <button type="submit" id="confirmar-btn" style="display:none;">Confirmar Alterações</button>
-                <a href="dashboard.php"><button type="button">Voltar à Dashboard</button></a>
+                <a href="dashboard.php"><button type="button">Voltar ao Dashboard</button></a>
             </div>
         </form>
     </div>

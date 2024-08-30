@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Login e Registro</title>
+    <title>Login</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>

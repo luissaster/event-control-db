@@ -124,9 +124,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['unregister_course_id']
         <nav>
             <?php 
             // Exibir os links de acordo o cargo do usuário
+            echo "<a href='about.php'><button class='user-info-btn'>Sobre</button></a>";
             echo "<a href = 'user_info.php'><button class='user-info-btn'>Informações Pessoais</button></a>";
             if ($user['role'] == 'admin') {
-                echo "<a href='manage_events.php'><button class='user-info-btn'>Gerenciar Eventos</button></a>";
+                echo "<a href='manage_events.php'><button class='user-info-btn'>Adicionar Eventos</button></a>";
+                echo "<a href='edit_events.php'><button class='user-info-btn'>Editar Eventos</button></a>";
                 echo "<a href='reports.php'><button class='user-info-btn'>Relatório</button></a>";
             }
             echo "<a href='index.php'><button class='user-info-btn'>Sair</button></a>";
