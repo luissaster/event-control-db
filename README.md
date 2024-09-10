@@ -1,1 +1,1 @@
-# event-control-db
+# Sistema de Controle de Eventos Acadêmicos
